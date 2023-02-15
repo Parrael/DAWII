@@ -10,8 +10,7 @@
 
     echo $nome . "" . $outronome;
     echo "<br> <br>";
-
-   unset($nome); //Remove a variável. Se quiser limpar várias, basta separar por ","
+    unset($nome); //Remove a variável. Se quiser limpar várias, basta separar por virgula
 
    if(!isset($nome)){
         echo "a variável está vazia. <br> <br>";
