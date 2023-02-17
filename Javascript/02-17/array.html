@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <script type="text/javascript">
+        var a = new Array(10);
+
+        a[0] = "xyz";
+        a[0] = "true";
+        a[0] = "1.500";
+        console.log(a);
+
+        var nomes = ['Catarina']; //forma literal da declaração
+        console.log("-------------1--------------");
+        console.log(nomes);
+        console.log(nomes.length); //retorna tamanho da lista - 1
+        
+        nomes.push('Kennedy');
+        console.log("-------------------");
+        console.log(nomes);
+        console.log(nomes.length);
+
+        nomes.push(12);
+        nomes.push(false);
+        console.log(nomes);
+
+        console.log(nomes);
+        console.log(nomes.length);
+
+        nomes.unshift('Ana'); //adiciona no início
+        console.log(nomes);
+
+        delete nomes[1];
+        console.log(nomes);
+
+        //remover e retornar o ultimo elemento de array
+        var nome = nomes.pop();
+        console.log("Elemento removido: " + nome);
+        console.log(nomes);
+
+        //remover e retornar o 1o elemento de array
+        nomes = nomes.shift();
+        console.log("Elemento removido: " + nome);
+
+        //Splice
+        var test = [1,2,3,4];
+        test.slice(2,1);
+        console.log(test);
+        
+        console.log("-------------------");
+        console.log(typeof nomes); //retorna object
+
+        //criando array de array
+        var multidimencional = [ [1,2,3],[4,5,6],[7,8,9] ];
+        console.log("-----Array de array-----");
+        console.log(multidimencional);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
