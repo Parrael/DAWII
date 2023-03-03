@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas</title>
+</head>
+<body>
+    <script>
+        var hoje = new Date();
+        console.log(hoje);
+        console.log(typeof hoje);
+
+        var dataPassada = new Date("01/12/1994 15:23:25");
+        console.log(dataPassada);
+        console.log(typeof dataPassada);
+
+        var data1 = new Date("25 jul 2017 15:29:40");
+        console.log(data1);
+        console.log(typeof data1);
+
+        //meses - jan 0 e dez 11
+        //ano, mes, dia, hora, min, seg
+        var data2 = new Date(1994, 0, 22, 15, 23, 35);
+        console.log(data2);
+        console.log(typeof data2);
+
+        //formatando data 
+        var hoje2 = new Date(); //data atual
+        console.log(hoje2);
+        var dia = hoje2.getDate();
+        var mes = hoje2.getMonth(); //jan=0, fev=1 e assim por diante 
+        var ano = hoje2.getFullYear();
+        var diaSemanaNum = hoje2.getDay(); //0=domingo e assim por diante
+
+        var semana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+
+        var diaSemanaTextual = semana[diaSemanaNum];
+
+        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+        var mesTextual = meses[mes];
+
+        var hora = hoje2.getHours();
+        var min = hoje2.getMinutes();
+        var seg = hoje2.getSeconds();
+
+        console.log(`${diaSemanaTextual}, ${dia}, ${mesTextual}, ${ano}, ${hora}, ${min}, ${seg}`);
+
+        var dataX = new Date("10/04/2022");
+        var dataY = new Date("10/05/2022");
+
+        //if (dataX === dataY){ //não funciona pq para comparar se datas são iguais, é necessário utilizar os milissegundos}
+        
+        if(+dataX == +dataY){
+            alert("Datas iguais");
+        }else{
+            alert("Datas diferentes");
+        }
+
+        //para comparar com <= ou >= não precisa de milissegundos
+        if(dataX > dataY){
+            alert("A data inicial é > que a final");
+        }
+    </script>
+</body>
+</html>

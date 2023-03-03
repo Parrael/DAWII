@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas 2</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            background-color: black;
+            height: 30px;
+            color:white;
+            text-align: right;
+            padding-top: 7px;
+            padding-right: 5px;
+            width: calc(100vw-padding);
+        }
+        #saudacao{
+            font-size: 30px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var hoje = new Date();
+        
+        function escreveData(){
+            var dia = hoje.getDate();
+            var mes = hoje.getMonth();  
+            var ano = hoje.getFullYear();
+
+            var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            var mesTexto = meses[mes];
+
+            var diaSemana = hoje.getDay();
+
+            var diaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+            var diaSemana = diasSemana[diaSemana];
+
+            var dataPorExtenso = diaSemana + ", " + dia + " de " + mesTexto + " de " + ano;
+
+            document.getElementById("data").textContent = dataPorExtenso;
+            configByTime();
+        }
+
+        function configByTime(){
+            if(hoje.getHours > 19){
+                document.getElementById("body").style.backgroundColor = "gray";
+                document.getElementById("body").style.color = "black";
+                document.getElementById("saudacao").textContent = "Boa noite";
+            }else{
+                document.getElementById("body").style.backgroundColor = "blue";
+                document.getElementById("body").style.color = "white";
+                document.getElementById("saudacao").textContent = "Bom dia";
+            }
+        }
+    </script>
+</head> 
+
+<body id="body" onload="escreveData()">
+    
+    <div id="data"></div>
+
+    <span id="saudacao"></span>
+</body>
+</html>
