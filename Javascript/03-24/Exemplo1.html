@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1</title>
+<script type="text/javascript">
+    function escondeLink(){
+        var i = 0; 
+        while(i <= document.getElementsByName('link').length){
+            //document.getElementsByName('link')[i].style.visibility = "hidden";
+            document.getElementsByName('link')[i].style.display = "none";
+            i++;
+        }
+    }
+</script>
+</head>
+
+<body>
+    <a href="http://www.cotil.unicamp.br" name="link">Cotil</a>
+    <a href="http://www.unicamp.br" name="link">Unicamp</a>
+    <a href="http://www.g1.com.br" name="link">G1</a>
+
+    <hr>
+
+    <p id="paragrafo"><b>paragrafo 1</b></p>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, dolorum quia quidem quibusdam perferendis non aliquid eaque repellat inventore debitis. Ex unde nesciunt soluta in eaque velit voluptatum doloribus omnis.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, modi, distinctio assumenda vero nam itaque, quo voluptatum ullam architecto magni porro recusandae explicabo sapiente illum veritatis excepturi voluptatem natus quod.
+    </p>
+
+    <button onclick="escondeLink();">Versão para imprimir</button>
+
+</body>
+</html>

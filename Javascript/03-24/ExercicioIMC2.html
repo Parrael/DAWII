@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+
+<script>
+    function calculaIMC(){
+        var msg = "";
+        var color = "";
+        var bk = "";
+
+        var peso = document.getElementById("peso").value;
+        var altura = document.getElementById("altura").value;
+
+        if(peso.trim() == ""){
+            document.getElementById("msgPeso").textContent = "Informe o peso";
+            document.getElementById("msgPeso").style.color = "red";
+            document.getElementById("msgPeso").style.fontWeight = "bold";
+            document.getElementById("msgPeso").style.fontSize = "12px";
+            exit();
+        }else{
+            document.getElementById("msgPeso").textContent = "";
+        }
+        if(altura.trim() == ""){
+            document.getElementById("msgAltura").textContent = "Informe o peso";
+            document.getElementById("msgAltura").style.color = "red";
+            document.getElementById("msgAltura").style.fontWeight = "bold";
+            document.getElementById("msgAltura").style.fontSize = "12px";
+            exit();
+        }else{
+            document.getElementById("msgAltura").textContent = "";
+        }
+
+        var imc = peso/(altura*altura);
+
+        if(imc < 18.5){
+            msg = "Abaixo do peso. IMC = " + imc;
+            color = "yellow";
+        }else if((imc >=18.6) && (imc <=24.9)){
+            msg = "Peso ideal. IMC = " + imc;
+            color = "green";
+        }else if((imc >=25.0) && (imc <=29.9)){
+            msg = "Levemente acima do peso. IMC = " + imc;
+            color = "orange";
+        }else if((imc >=30.0) && (imc <=34.9)){
+            msg = "Obesidade grau I. IMC = " + imc;
+            color = "red";
+        }else if((imc >=35.0) && (imc <=39.9)){
+            msg = "Obesidade grau II. IMC = " + imc;
+            color = "red";
+            bk = "yellow";
+        }else{
+            msg = "Obesidade grau III. IMC = " + imc;
+            color = "white";
+            bk = "red";
+        }
+
+        document.getElementById("msg").innerHTML = "<b>"+msg+"</b>";
+        document.getElementById("msg").style.color = color;
+        document.getElementById("msg").style.backgroundColor = bk;
+    }
+</script>
+</head>
+
+<body>
+    <h1>Cálculo de IMC</h1>
+
+    <form>
+        <label> Peso: </label>
+        <input type="text" id="peso"><span id="msgPeso"></span>
+
+        <br><br>
+
+        <label> Altura: </label>
+        <input type="text" id="altura"><span id="msgAltura"></span>
+
+        <br><br>
+
+        <input type="button" value="Verificar" onclick="calculaIMC();">
+
+    </form>
+
+    <br>
+
+    <span id="msg"></span>
+    
+</body>
+</html>

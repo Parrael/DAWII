@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca Imagem</title>
+
+    <script type="text/javascript">
+        function destacaTabela(){
+            var tabela = document.getElementById("tabelaAlunos");
+            tabela.style.backgroundColor = "yellow";
+            tabela.style.fontSize = "20px";
+            tabela.style.transform = "rotate(30deg)";
+            tabela.style.transitionDuration = "2s";
+        }
+
+        function voltaTabela(){
+            var tabela = document.getElementById("tabelaAlunos");
+            tabela.style.backgroundColor = "white";
+            tabela.style.fontSize = "16px";
+            tabela.style.transform = "rotate(0deg)";
+            tabela.style.transitionDuration = "2s";
+        }
+    </script>
+
+</head>
+<body>
+    <img src="html.png" width="100px" height="100px" id="logo"
+    onmouseover="this.src = 'css.png'"
+    onmouseout="this.src = 'unicamp.png'">
+
+    <hr>
+
+    <table border="1px" id="tabelaAlunos"
+            onmouseover="destacaTabela();" onmouseout="voltaTabela();">
+        <tr>
+            <th>RA</th>
+            <th>Nome</th>
+        </tr>
+        <tr>
+            <th>1234</th>
+            <th>Simone</th>
+        </tr>
+        <tr>
+            <th>5678</th>
+            <th>Elaine</th>
+        </tr>
+        <tr>
+            <th>1001</th>
+            <th>Prips</th>
+        </tr>
+    </table>
+</body>
+</html>
