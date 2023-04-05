@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function exibeValor(){
+            var valor = document.getElementById('capacitacao').value; 
+            document.getElementById('valor').textContent = valor; 
+        }
+        function contaCaracteres(){
+            var tamMax = 10;
+            var texto = document.getElementById('nome').value;
+            document.getElementById('numCaracteres').textContent = texto.length;
+            document.getElementById('numCaracteresRest').textContent = tamMax - texto.length; 
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Capactação:<br>
+        <input type="range" id="capacitacao" min="0" max="10" value="0" onmousemove="exibeValor()">
+        <span id="valor">0</span>
+
+        <br><br>
+
+        Nome:<br>
+        <input type="text" id="nome" maxlength="10" onkeyup="contaCaracteres()">
+        <span id="numCaracteres">0</span> Caracteres /
+        <span id="numCaracteresRest">10</span> Caracteres restantes 
+    </form>
+</body>
+</html>
