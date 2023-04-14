@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+
+    <style>
+
+    </style>
+
+    <script type="text/javascript">
+        function calcArea(){
+            var raio = parseFloat(document.getElementById('raio').value);
+            console.log(raio);
+            var area = 0;
+            area = raio*raio*3.14;
+            console.log(area);
+            document.getElementById('textArea').value = area.toString();
+        }
+        function calcPerimetro(){
+            var raio = parseFloat(document.getElementById("raio").value);
+            console.log(raio);
+            var perimetro = 0; 
+            perimetro = 2*3.14*raio;
+            document.getElementById("textPerimetro").textContent = perimetro.toString();
+            document.getElementById("textPerimetro").style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Raio: <br>
+        <input type="text" id="raio">
+
+        <br><br>
+
+        <input type="button" value="Area" onclick="calcArea()">
+        <input type="button" value="Perimetro" onclick="calcPerimetro()">
+
+        <br><br>
+
+        Área: <br>
+        <input type="text" id="textArea">
+
+        <br><br>
+
+        Perímetro: <br>
+        <span id="textPerimetro"></span>
+    </form>
+</body>
+</html>
