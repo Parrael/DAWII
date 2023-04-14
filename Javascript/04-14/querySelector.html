@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"> 
+    function exibirSenha(){
+        if(document.querySelector("#pwd").getAttribute("type") == "password") {
+            document.querySelector("#pwd").setAttribute("type", "text");
+            document.querySelector("#exibicao").textContent = "Esconder Senha";
+
+        } else if (document.querySelector("#pwd").getAttribute("type") == "text") {
+            document.querySelector("#pwd").setAttribute("type", "password");
+            document.querySelector("#exibicao").textContent = "Exibir Senha";
+        }
+    }
+    </script>
+</head>
+<body>
+    Login: <br>
+    <input type="text" name="login" id="login">
+
+    <br><br>
+    Password:<br>
+    <input type="password" name="pwd" id="pwd">
+    <small id="exibicao" onclick="exibirSenha()">Exibir senha</small>
+    <br><br>
+    <button>OK</button>
+</body>
+</html>
