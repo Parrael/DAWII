@@ -51,7 +51,7 @@ if (!isset($_GET["raAluno"])) {
                 $qualidade = "selected";
             }            
 
-            echo "<form method='post' action='altera.php'>\n";
+            echo "<form method='post' action='altera.php' enctype='multipart/form-data'>\n";
             echo "RA:<br>\n";
             echo "<input type='text' size='10' name='ra' value='$row[ra]' readonly><br><br>\n";
             echo "Nome:<br>\n";
