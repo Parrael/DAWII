@@ -1,0 +1,6 @@
+Este arquivo foi criado<br>
+para testar funções do PHP<br>
+de leitura de arquivos<br>
+<hr>
+<b>Feito por:</b> Catarina e Parra <br> 
+<hr>
